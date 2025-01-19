@@ -1,5 +1,18 @@
-*body{
+    /*Css Reset*/
+*{
+    padding: 0;
+    margin: 0;
     box-sizing: border-box;
+}
+/*CSS Varibles*/
+:root {
+    --primary-color: chartreuse;
+    --secondary-color: #f4f4f4;
+    --font-size-base: 16px;
+    --spacing-unit: 8px;
+}
+/*Base Styles*/
+body{
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     background-color: lightblue;
 }
@@ -7,7 +20,5 @@ h1 {
     font-weight: 500;
     font-size: 10rem;
     text-align: center;
-    color: chartreuse;
-    
- 
+    color: var(--primary-color);
 }
