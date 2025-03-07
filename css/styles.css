@@ -10,11 +10,12 @@
     --secondary-color: #f4f4f4;
     --font-size-base: 16px;
     --spacing-unit: 8px;
+    --bgColor_1: lightblue;
 }
 /*Base Styles*/
 body{
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-    background-color: lightblue;
+    background-color: var(--bgColor_1);
 }
 h1 {
     font-weight: 500;
