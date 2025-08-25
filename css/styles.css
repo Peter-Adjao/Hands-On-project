@@ -57,5 +57,18 @@ h1 {
    background-color: #C490D1;
 }
 
+#one {
+    grid-column: 1/-1 ;
+}
+
+#two {
+    grid-row: 2 / 4;
+
+}
+
+#five {
+    grid-column: 2 / span 2 ;
+}
+
 
 
