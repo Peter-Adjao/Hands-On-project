@@ -70,5 +70,40 @@ h1 {
     grid-column: 2 / span 2 ;
 }
 
+.container1 {
+
+    margin: 5rem auto;
+    display: grid ;
+    grid-template: repeat(3, 1fr) / repeat(4 1fr);
+    grid-template-areas:
+    "h h h h"
+    "a a b b"
+    "f f f f"
+    ;
+    text-align: center;
+    font-size: 2rem;
+    width: 60rem;
+   
+
+}
+
+header {
+    grid-area: h;
+    background-color: #D0021B;
+}
+
+section#a {
+    grid-area: a;
+    background-color: #9013FE;
+}
+
+section#b {
+    grid-area: b;
+    background-color: #F8E71C;
+}
+ footer {
+    grid-area: f;
+    background-color: #53C20E;
+ }
 
 
