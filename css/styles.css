@@ -212,5 +212,38 @@ section#b {
     background-color: #00a1e0;
 }   
 
+/*z-index*/
+
+#cardone, #cardtwo, #cardthree {
+    width: 200px;
+    height: 200px;
+    text-align: center;
+}
+
+
+#cardone {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    z-index: 3;
+    background-color: #9bccdd;
+}
+
+#cardtwo {
+    position: absolute;
+    top: 60px;
+    right: 60px;
+    z-index: 2;
+    background-color: #58badd;
+}
+
+#cardthree {
+    position: absolute;
+    top: 100px;
+    right: 100px;
+    z-index: 1;
+    background-color: #00a1e0;
+}
+
 
 
