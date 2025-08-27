@@ -245,15 +245,19 @@ section#b {
     background-color: #00a1e0;
 }
 ul {
-    background-color: gray;
     display: inline-block;
-    border:  2px solid blue;
+    border:  1px solid blue;
     margin: 20px;
     border-radius: 10px;
      padding: 8px 35px;
 }
 
 ul:hover {
+    transform: scale(1.2);
+    transition: all 0.3s  0.2s;
+    background-color: gray;
+
+
 
 }
 
