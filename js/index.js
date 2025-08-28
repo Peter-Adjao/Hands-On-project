@@ -31,3 +31,23 @@ console.log(myFirstBook);
 
 let mySecondBook = new Book("New Age Of Tech", "Peter Adjao", 430);
 console.log(mySecondBook);
+
+let guests = ["Kofi", "Ama", "Yaw", "Tettey" ];
+
+console.log(guests);
+console.log(guests[0]);
+
+let firstGuest = 'Ama';
+let secondGuest = 'Kofi';
+
+let guest = [firstGuest, secondGuest];
+
+console.log(guest);
+
+let newMember = {name: "Yaw", vip: true};
+let oldMember = {name: "Kokor", vip: false};
+
+let allMembers = [newMember, oldMember];
+
+console.log(allMembers);
+
