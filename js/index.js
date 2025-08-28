@@ -46,8 +46,17 @@ console.log(guest);
 
 let newMember = {name: "Yaw", vip: true};
 let oldMember = {name: "Kokor", vip: false};
+let goldMember = {name: "Amina", vip: false};
+let platinumMember = {name: "Yaa", vip: true};
 
-let allMembers = [newMember, oldMember];
+
+let allMembers = [newMember, oldMember, goldMember, platinumMember];
+allMembers.push({name: "kojo", vip: true});
+allMembers.pop(oldMember);
+
+console.log(allMembers.length);
 
 console.log(allMembers);
+
+
 
