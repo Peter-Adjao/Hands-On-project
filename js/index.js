@@ -59,4 +59,23 @@ console.log(allMembers.length);
 console.log(allMembers);
 
 
+class Episode {
+    constructor(title, duration, minutesWatched) {
+        this.title = title;
+        this.duration = duration;
+        this.minutesWatched = this.minutesWatched;
+
+        if (minutesWatched === duration) {
+            this.hasBeenWatched = true;
+        } else {
+            this.hasBeenWatched = false;
+        }
+    }
+
+}
+
+let firstEpisode = new Episode("Beautful Beginnings", 45, 45); 
+
+console.log(firstEpisode);
+
 
