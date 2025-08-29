@@ -113,9 +113,17 @@ switch(firstUser.accountLevel) {
         console.log("Unknown account type!");
 }
 
+let seatsLeft = 8;
+let passengersStillToBoard = 10;
+let passengersBoarded = 0;
 
+while ( seatsLeft > 0 && passengersStillToBoard > 0) {
+    passengersBoarded++;
+    seatsLeft--;
+    passengersStillToBoard--;
+}
 
-
+console.log(passengersBoarded + " successfully on board!");
 
 /*
 const body = document.querySelector('body');
