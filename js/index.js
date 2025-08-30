@@ -125,6 +125,15 @@ while ( seatsLeft > 0 && passengersStillToBoard > 0) {
 
 console.log(passengersBoarded + " successfully on board!");
 
+const add = (firstNumber, secondNumber) => {
+    const result = firstNumber + secondNumber;
+    return result;
+}
+console.log(add(5, 5));
+
+
+
+
 /*
 const body = document.querySelector('body');
 
