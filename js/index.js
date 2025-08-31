@@ -185,6 +185,26 @@ const newShow = new Show("New+plus", 5)
 console.log(newShow);
 
 
+console.log(Math.floor(Math.random() * 6 + 1 ));
+
+
+class BePolite {
+    static sayHello() {
+        console.log("Hello!");
+    }
+    static sayHelloTo(name) {
+        console.log("Hello, " + name +"!");
+    }
+    static add(firstNumber, secondNumber) {
+        return firstNumber + secondNumber;
+    }
+ }
+ BePolite.sayHello();
+  BePolite.sayHelloTo("Atter");
+  const sum = console.log(BePolite.add(3, 4));
+
+
+
 /*
 const body = document.querySelector('body');
 
