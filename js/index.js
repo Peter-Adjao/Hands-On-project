@@ -204,6 +204,40 @@ class BePolite {
   const sum = console.log(BePolite.add(3, 4));
 
 
+  //clean fuctions
+  const firstOnlineUser = {
+    name: "Kojo",
+    online: true,
+    accounttype: "normal"
+  };
+
+  const secondOnlineUser = {
+    name: "Amina",
+    online: true,
+    occountType: "premium"
+  };
+
+  const thirdOnlineUser = {
+    name: "Ama",
+    online: true,
+    acountType: "premium"
+  };
+
+  const sendWelcomeMessageToUser = (user) => {
+    if (user.online) {
+        if (user.accountType === "normal") {
+            console.log("Hello " + user.name + "!");
+        } else {
+            console.log("Welcome back premium user " + user.name + "!");
+        }
+    }
+
+  }
+
+  sendWelcomeMessageToUser(firstOnlineUser);
+
+
+
 
 /*
 const body = document.querySelector('body');
