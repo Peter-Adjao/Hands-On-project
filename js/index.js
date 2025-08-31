@@ -131,6 +131,39 @@ const add = (firstNumber, secondNumber) => {
 }
 console.log(add(5, 5));
 
+class BankAccount {
+    constructor(owner, balance) {
+        this.owner = owner;
+        this.balance = balance;
+    }
+
+    showBalance( ) {
+        console.log("Balance: " + this.balance + " cedis" );
+    }
+
+    deposit(amount) {
+        console.log("Depositing " + amount + "cedis");
+        this.balance += amount;
+        this.showBalance();
+    } 
+
+    withdraw(amount) {
+        if (amount > this.balance) {
+            console.log("Withdrawal denied!");
+        } else {
+            console.log("Withdrawing " + amount + " cedis");
+            this.balance -= amount;
+            this.showBalance();
+        }
+    }
+
+
+}
+
+const newAccount = new BankAccount("Atter Peter", 500);
+newAccount.withdraw(400);
+newAccount.showBalance();
+
 
 
 
@@ -156,5 +189,22 @@ ${episodes[i].watchedText}
   }
   body.append(newDiv);
 }
+
+//second Snippet
+const tauRatings = [5, 4, 5, 5, 1, 2];
+const colinRatings = [5, 5, 5, 4, 5];
+
+const tauAverage = calculateAverageRating(tauRatings);
+const colinAverage = calculateAverageRating(colinRatings);
+
+if (tauAverage && colinAverage) {
+  document.querySelector('#tau-score').innerText = tauAverage.toFixed(1) + ' stars';
+  document.querySelector('#colin-score').innerText = colinAverage.toFixed(1) + ' stars';
+  document.querySelector('#clara-score').innerText = `${calculateAverageRating([]) === 0 ? 'No ratings' : calculateAverageRating([]) + ' stars'}`
+}
+
+
+
+
 */
 
