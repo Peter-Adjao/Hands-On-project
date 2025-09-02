@@ -237,6 +237,77 @@ class BePolite {
   sendWelcomeMessageToUser(firstOnlineUser);
 
 
+  // StringStats
+  const testString = "Aku, Amina, Yaa, Kojo, Kwabla, Abla, Anum, Aban, Anan";
+  const getWordCount = (stringToTest) => {
+  const wordArray = stringToTest.split(' ');
+  return wordArray.length;
+}
+
+const getLetterCount = (stringToTest) => {
+  const wordArray = stringToTest.split(' ');
+  let totalLetters = 0;
+  for (let word of wordArray) {
+    // remove punctuation so as to only count letters
+    word.replace(/[.,\/#!$%\^&\*;:{}=\-_`~()]/g, "");
+    totalLetters += word.length;
+  }
+  return totalLetters;
+}
+
+/*
+** returns average word length to 
+** two decimal places
+*/
+const getAverageWordLength = (stringToTest) => {
+  return parseFloat((getLetterCount(stringToTest) / getWordCount(stringToTest)).toFixed(2));
+}
+
+const printStringStats = (stringToTest) => {
+  console.log({
+    wordCount: getWordCount(stringToTest),
+    letterCount: getLetterCount(stringToTest),
+    averageWordLength: getAverageWordLength(stringToTest)
+  })
+}
+
+printStringStats(testString);
+
+//Recursive
+const commentToTest = {
+  content: '1',
+  subComments: [
+    { content: '1-A', subComments: [] },
+    { content: '1-B', subComments: [
+        { content: '1-B-a', subComments: [] }
+    ] },
+    { content: '1-C', subComments: [
+        { content: '1-C-a', subComments: [
+            { content: '1-C-a-i', subComments: [] },
+            { content: '1-C-a-ii', subComments: [] }
+        ] },
+        { content: '1-C-b', subComments: [] }
+    ] },
+    { content: '1-D', subComments: [] }
+  ] 
+};
+
+const getAllComments = (comment) => {
+  let allComments = comment.content;
+  for (let subComment of comment.subComments) {
+    allComments += '\n' + getAllComments(subComment);
+  }
+  return allComments;
+}
+
+console.log(getAllComments(commentToTest));
+
+//Modifying the DOM
+const modifyFirstHeading = document.querySelector("#modifyh1");
+modifyFirstHeading.textContent = "WE are here, we can heal the world!";
+
+
+
 
 
 /*
@@ -274,6 +345,9 @@ if (tauAverage && colinAverage) {
   document.querySelector('#colin-score').innerText = colinAverage.toFixed(1) + ' stars';
   document.querySelector('#clara-score').innerText = `${calculateAverageRating([]) === 0 ? 'No ratings' : calculateAverageRating([]) + ' stars'}`
 }
+
+
+//stringStats
 
 
 
