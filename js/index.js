@@ -303,11 +303,12 @@ const getAllComments = (comment) => {
 console.log(getAllComments(commentToTest));
 
 //Modifying the DOM
- const modifyFirstHeading = document.querySelector("#modifyh1");
- modifyFirstHeading.textContent = "WE are here, we can heal the world!";
+//  const modifyFirstHeading = document.querySelector("#modifyh1");
+//  modifyFirstHeading.textContent = "We are here, we can heal the world!";
 
-const newHeading = document.querySelector("#modifyh1");
-newHeading.innerHTML = "<h2>We Can Do It Together</h2>";
+const headers = document.querySelector("#page-header");
+headers.innerHTML = "<h2>We Can Do It Together</h2>";
+headers.classList.add("text-center");
 
 
 
