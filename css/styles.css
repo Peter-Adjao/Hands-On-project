@@ -278,6 +278,17 @@ a:hover {
     text-align: center;
 }
 
+.bg-color {
+    background-color: #060A3D;
+}
+
+.styled-article {
+    width: 60%;
+  border: 2px solid rgb(117, 110, 110);
+  padding: 15px;
+  margin: 15px auto;
+}
+
 
 
 

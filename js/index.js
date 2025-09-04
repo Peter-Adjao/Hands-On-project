@@ -303,12 +303,56 @@ const getAllComments = (comment) => {
 console.log(getAllComments(commentToTest));
 
 //Modifying the DOM
-//  const modifyFirstHeading = document.querySelector("#modifyh1");
-//  modifyFirstHeading.textContent = "We are here, we can heal the world!";
+ const modifyFirstHeading = document.querySelector("#modifyh1");
+ modifyFirstHeading.textContent = "We are here, we can heal the world!";
 
 const headers = document.querySelector("#page-header");
 headers.innerHTML = "<h2>We Can Do It Together</h2>";
 headers.classList.add("text-center");
+headers.classList.remove("bg-red");
+headers.classList.add("bg-color")
+
+//Added an article
+const newArticle = document.createElement("article");
+const newHeading = document.createElement("h3");
+const newParagraph = document.createElement("p");
+
+//Create content in the article
+newHeading.texContent = "Article 004";
+newParagraph.textContent = `"This app is built with vanilla JS" → It means the developer didn't rely on frameworks or libraries; they just used the core JavaScript features, like document.querySelector, addEventListener, etc
+Practicing vanilla JS is super important for beginners because:
+
+It forces you to understand how the browser works.
+
+Frameworks are built on top of vanilla JS. If you know vanilla, you can pick up frameworks much faster.
+ 
+You'll also be able to debug framework code more effectively.
+`;
+
+//Add content to article
+newArticle.appendChild(newHeading);
+newArticle.appendChild(newParagraph);
+
+//Add Css style
+newArticle.classList.add("styled-article");
+
+//add attribute s to article
+newArticle.setAttribute("id", "art-004");
+
+//Add article to our main element(DOM);
+const main = document.querySelector("main");
+main.appendChild(newArticle);
+
+
+
+
+
+
+
+
+
+
+
 
 
 
