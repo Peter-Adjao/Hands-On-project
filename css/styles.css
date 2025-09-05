@@ -289,6 +289,34 @@ a:hover {
   margin: 15px auto;
 }
 
+.btn-container {
+    display: flex;
+    flex-direction: row;
+    margin: 2rem;
+
+}
+
+.btn-group {
+    margin: 0rem auto;
+    display: flex;
+    gap: 1rem;
+    background-color: gray;
+    border-radius: 5px;
+
+}
+
+.btn-secondary {
+    border: none;
+    cursor: pointer;
+    background-color: transparent;
+    color: white;
+    font-weight: bold;
+    padding: 1rem;
+    
+    
+
+    
+}
 
 
 

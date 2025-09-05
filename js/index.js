@@ -312,7 +312,7 @@ headers.classList.add("text-center");
 headers.classList.remove("bg-red");
 headers.classList.add("bg-color")
 
-//Added an article
+//Create an article and added it to the DOM
 const newArticle = document.createElement("article");
 const newHeading = document.createElement("h3");
 const newParagraph = document.createElement("p");
