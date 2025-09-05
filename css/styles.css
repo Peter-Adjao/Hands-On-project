@@ -276,6 +276,8 @@ a:hover {
 
 .text-center {
     text-align: center;
+    padding: 2rem;
+    
 }
 
 .bg-color {
@@ -312,11 +314,26 @@ a:hover {
     color: white;
     font-weight: bold;
     padding: 1rem;
-    
-    
-
-    
 }
 
+.btn-secondary:hover {
+    background-color: rgb(196, 191, 191);
+    border-bottom: 3px blue solid;
+}
 
+.blue-background {
+    background-color: rgb(5, 5, 92);
+}
+
+.brown-background {
+    background-color: rgb(119, 60, 4);
+}
+
+.green-background {
+    background-color: rgb(2, 109, 2);
+}
+
+.text-white {
+    color: white; 
+}
 

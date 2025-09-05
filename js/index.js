@@ -343,6 +343,35 @@ newArticle.setAttribute("id", "art-004");
 const main = document.querySelector("main");
 main.appendChild(newArticle);
 
+//Get the header and buttons(DOM elements)
+const changeHeaderColor = document.querySelector(".mainHeader");
+const blueButton = document.querySelector("#color-button-blue");
+const brownButton = document.querySelector("#color-button-brown");
+const greenButton = document.querySelector("#color-button-green");
+const noneButton = document.querySelector("#color-button-none");
+
+//Add event listeners
+blueButton.addEventListener("click", () => {
+    changeHeaderColor.classList.remove("brown-background", "green-background");
+    changeHeaderColor.classList.add("blue-background", "text-white");
+})
+
+brownButton.addEventListener("click", () => {
+    changeHeaderColor.classList.remove("blue-background", "green-background");
+    changeHeaderColor.classList.add("brown-background", "text-white");
+})
+
+greenButton.addEventListener("click", () => {
+    changeHeaderColor.classList.remove("brown-background", "blue-background");
+    changeHeaderColor.classList.add("green-background", "text-white");
+})
+
+
+
+
+
+
+
 
 
 
