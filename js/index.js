@@ -366,6 +366,14 @@ greenButton.addEventListener("click", () => {
     changeHeaderColor.classList.add("green-background", "text-white");
 })
 
+noneButton.addEventListener("click", () => {
+    changeHeaderColor.classList.remove("brown-background", "green-background", "blue-background");
+})
+
+
+
+
+
 
 
 
