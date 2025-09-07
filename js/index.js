@@ -312,36 +312,36 @@ headers.classList.add("text-center");
 headers.classList.remove("bg-red");
 headers.classList.add("bg-color")
 
-//Create an article and added it to the DOM
-const newArticle = document.createElement("article");
-const newHeading = document.createElement("h3");
-const newParagraph = document.createElement("p");
+// //Create an article and added it to the DOM
+// const newArticle = document.createElement("article");
+// const newHeading = document.createElement("h3");
+// const newParagraph = document.createElement("p");
 
-//Create content in the article
-newHeading.texContent = "Article 004";
-newParagraph.textContent = `"This app is built with vanilla JS" → It means the developer didn't rely on frameworks or libraries; they just used the core JavaScript features, like document.querySelector, addEventListener, etc
-Practicing vanilla JS is super important for beginners because:
+// //Create content in the article
+// newHeading.texContent = "Article 004";
+// newParagraph.textContent = `"This app is built with vanilla JS" → It means the developer didn't rely on frameworks or libraries; they just used the core JavaScript features, like document.querySelector, addEventListener, etc
+// Practicing vanilla JS is super important for beginners because:
 
-It forces you to understand how the browser works.
+// It forces you to understand how the browser works.
 
-Frameworks are built on top of vanilla JS. If you know vanilla, you can pick up frameworks much faster.
+// Frameworks are built on top of vanilla JS. If you know vanilla, you can pick up frameworks much faster.
  
-You'll also be able to debug framework code more effectively.
-`;
+// You'll also be able to debug framework code more effectively.
+// `;
 
-//Add content to article
-newArticle.appendChild(newHeading);
-newArticle.appendChild(newParagraph);
+// //Add content to article
+// newArticle.appendChild(newHeading);
+// newArticle.appendChild(newParagraph);
 
-//Add Css style
-newArticle.classList.add("styled-article");
+// //Add Css style
+// newArticle.classList.add("styled-article");
 
-//add attribute s to article
-newArticle.setAttribute("id", "art-004");
+// //add attribute s to article
+// newArticle.setAttribute("id", "art-004");
 
-//Add article to our main element(DOM);
-const main = document.querySelector("main");
-main.appendChild(newArticle);
+// //Add article to our main element(DOM);
+// const main = document.querySelector("main");
+// main.appendChild(newArticle);
 
 //Get the header and buttons(DOM elements)
 const changeHeaderColor = document.querySelector(".mainHeader");
@@ -350,25 +350,58 @@ const brownButton = document.querySelector("#color-button-brown");
 const greenButton = document.querySelector("#color-button-green");
 const noneButton = document.querySelector("#color-button-none");
 
+//Grabbing the button id and section element  
+const addPostButton = document.querySelector("#add-post");
+const articleSection = document.querySelector("section");
+
 //Add event listeners
 blueButton.addEventListener("click", () => {
     changeHeaderColor.classList.remove("brown-background", "green-background");
     changeHeaderColor.classList.add("blue-background", "text-white");
-})
+});
 
 brownButton.addEventListener("click", () => {
     changeHeaderColor.classList.remove("blue-background", "green-background");
     changeHeaderColor.classList.add("brown-background", "text-white");
-})
+});
 
 greenButton.addEventListener("click", () => {
     changeHeaderColor.classList.remove("brown-background", "blue-background");
     changeHeaderColor.classList.add("green-background", "text-white");
-})
+});
 
 noneButton.addEventListener("click", () => {
     changeHeaderColor.classList.remove("brown-background", "green-background", "blue-background");
-})
+});
+
+addPostButton.addEventListener("click", () => {
+    const newPost = createNewPost();
+    articleSection.appendChild(newPost);
+});
+
+
+//New post function
+ function createNewPost() {
+    let newArticle = document.createElement("article");
+    let newHeading = document.createElement("h5");
+    let newParagraph = document.createElement("p");
+
+//Adding content
+    newHeading.textContent = "Another Blog Post";
+    newParagraph.textContent = `JavaScript may not be part of your web development toolkit for the moment; however, it is a powerful front-end language that will probably
+     become necessary in your coding journey if you want to be a front-end developer. If you want to focus just on CSS for now (it's not a bad idea!), Bulma could be useful for you to explore.
+`;
+  
+//Adding the content to the article
+newArticle.appendChild(newHeading);
+newArticle.appendChild(newParagraph);
+
+newArticle.classList.add("list-group-item");
+return newArticle;
+}
+
+
+
 
 
 
