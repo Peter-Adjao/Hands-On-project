@@ -373,6 +373,83 @@ a:hover {
     border-radius: 5px;
 }
 
+#comment-form {
+    width: 90%;
+    max-width: 400px;
+    margin: 50px auto;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* label styling */
+#comment-form label {
+    display: block;
+    margin-top: 6px;
+    font-weight: bold;
+    color:#333;
+}
+
+/* Input styling */
+#comment-form .form-control {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-size: 14px;
+    transition: background-color 0.3s ease;
+}
+
+#comment-form .form-control:focus {
+    border-color: #28a745;
+    outline: none;
+    box-shadow: 0 0 4px rgba(40, 167, 69, 0.4);
+}
+
+/* button styling */
+#comment-form .btn {
+    width: 100%;
+    padding: 12px;
+    font-size: 16px;
+    background-color: #28a745;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+#comment-form .btn:hover {
+    background-color: #218838;
+}
+
+/* for tablets and larger screens */
+@media (min-width: 768px) {
+    #comment-form{
+        max-width: 500px;
+        padding: 30px;
+    }
+}
+
+@media (min-width: 1024) {
+    #comment-form {
+        max-width: 600px;
+    }
+}
+
+
+
+
+
+    
+
+
+
+
+
+
 
 
 

@@ -408,6 +408,22 @@ newArticle.classList.add("list-group-item");
 return newArticle;
 }
 
+// Grab and hold DOM reference elements
+const firstNameInput = document.querySelector("#first-name");
+const lastNameInput = document.querySelector("#last-name");
+const submitButton = document.querySelector("#submit-button");
+const sideBar = document.querySelector("#a");
+
+
+submitButton.addEventListener("click", () => {
+    sideBar.textContext = "fisrtNameInput";
+})
+
+
+
+
+
+
 
 
 
