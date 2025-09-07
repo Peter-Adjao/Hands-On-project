@@ -352,6 +352,7 @@ const noneButton = document.querySelector("#color-button-none");
 
 //Grabbing the button id and section element  
 const addPostButton = document.querySelector("#add-post");
+const removePost = document.querySelector("#remove-last-post");
 const articleSection = document.querySelector("section");
 
 //Add event listeners
@@ -379,6 +380,13 @@ addPostButton.addEventListener("click", () => {
     articleSection.appendChild(newPost);
 });
 
+removePost.addEventListener("click", () => {
+    const articleCount = articleSection.childElementCount;
+    if (articleCount > 1) {
+        articleSection.removeChild(articleSection.children[articleCount - 1]);
+    }
+});
+ 
 
 //New post function
  function createNewPost() {
