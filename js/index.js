@@ -416,8 +416,11 @@ const sideBar = document.querySelector("#a");
 
 
 submitButton.addEventListener("click", () => {
-    sideBar.textContext = "fisrtNameInput";
+    sideBar.textContent = "Hello, " + firstNameInput.value + " " + lastNameInput.value; 
 })
+
+
+
 
 
 
