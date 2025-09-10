@@ -372,6 +372,9 @@ a:hover {
 }
 
 #comment-form {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
     width: 90%;
     max-width: 400px;
     margin: 50px auto;
@@ -438,17 +441,24 @@ a:hover {
 }
 
 .container4 {
-
     margin: 1rem auto;
     display: grid ;
-    grid-template: repeat(3, 1fr) / repeat(4, 1fr);
+    grid-template: repeat(auto-fit, minmax(400px 1fr));
     grid-template-areas:
     "a a b b"
     ;
     text-align: center;
-    font-size: 2rem;
-    width: 60rem;
+    font-size: 1.2rem;
+    width: 100%;
+    max-width: 1200px;
+    padding: 1rem;
+
+}.container4 section {
+    padding: 1rem;
+    border-radius: 8px;
 }
+
+
 
 /* .show-input {
     width: 300px;

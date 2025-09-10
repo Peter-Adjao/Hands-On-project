@@ -413,11 +413,14 @@ const firstNameInput = document.querySelector("#first-name");
 const lastNameInput = document.querySelector("#last-name");
 const submitButton = document.querySelector("#submit-button");
 const sideBar = document.querySelector("#a");
+const commentForm = document.querySelector("#comment-form");
 
 
-submitButton.addEventListener("click", () => {
+submitButton.addEventListener("click", ($event) => {
+    $event.preventDefault();
     sideBar.textContent = "Hello, " + firstNameInput.value + " " + lastNameInput.value; 
-})
+    commentForm.reset();
+});
 
 
 

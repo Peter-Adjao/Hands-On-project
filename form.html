@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form</title>
+    <link rel="stylesheet" href="css/form.css">
+</head>
+<body>
+    <div class="container">
+        <header id="page-header" class="mainHeader">
+            <h1 id="main-heading" cltass="text-center">Handle User input</h1>
+        </header>
+        <div class="row">
+            <main class="">
+                <form action="" id="radio-form">
+                    <h3>Hobbies</h3>
+                    <div class="radio-group">
+                        <div class="form-check">
+                            <input type="checkbox" class="form-check-input" id="sports-checkbox">
+                            <label for="sports-checkbox" class="form-check-label">Sports</label>
+                        </div>
+                        <div class="form-check">
+                            <input type="checkbox" class="form-check-input" id="games-checkbox">
+                            <label for="games-checkbox" class="form-check-label">Video games</label>
+                        </div>
+                        <div class="form-check">
+                            <input type="checkbox" class="form-check-input" id="music-checkbox">
+                            <label for="music-checkbox" class="form-check-label">Music</label>
+                        </div>
+                    </div>
+
+                    <h3>Favorite mode of transport</h3>
+                    <div class="radio-group">
+                        <div class="form-check">
+                            <input type="radio" class="form-check-input" id="car-radio" value="car" name="transport-method">
+                            <label for="car-radio" class="form-check-label">Car</label>
+                        </div>
+                        <div class="form-check">
+                            <input type="radio" class="form-check-input" id="bike-radio" value="bike" name="transport-method">
+                            <label for="bike-radio" class="form-check-label">Bike</label>
+                        </div>
+                        <div class="form-check">
+                            <input type="radio" class="form-check-input" id="other-radio" value="other" name="transport-method">
+                            <label for="other-radio" class="form-check-label">Other</label>
+                        </div>
+                    </div>
+
+                    <div class="radio-group">
+                        <label for="music-preference">Favourite kind of music</label>
+                        <select name="" class="select-control" id="music-preference">
+                            <option value="rock">Rock</option>
+                            <option value="Jazz">Jazz</option>
+                            <option value="classical">Classical</option>
+                            <option value="other">Other</option>
+                        </select>
+                    </div>
+                </form>
+            </main>
+
+            <aside id="sidebar" class="">
+                <p>
+                    You enjoy: 
+                    <ul>
+                        <li class="text-secondary">Sports</li>
+                        <li class="text-secondary">Video games</li>
+                        <li class="text-secondary">Music</li>
+                    </ul>
+                </p>
+                <p>Your favorite mode of transport is: <span id="transport-result"></span></p>
+                <p>Your favorite mode of transport is: <span id="music-result"></span></p>
+
+            </aside >
+        </div>
+
+    </div>
+
+
+    <script src="js/index.js"></script>
+</body>
+</html>
