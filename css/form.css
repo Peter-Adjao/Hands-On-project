@@ -111,6 +111,107 @@ form h3 {
     color: gray;
 }
 
+#comment-form {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    width: 90%;
+    max-width: 400px;
+    margin: 50px auto;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* label styling */
+#comment-form label {
+    display: block;
+    margin-top: 6px;
+    margin-bottom: 0.5rem;
+    font-weight: bold;
+    color:#333;
+}
+
+/* Input styling */
+#comment-form .form-control {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-size: 14px;
+    transition: background-color 0.3s ease;
+}
+
+#comment-form .form-control:focus {
+    border-color: #28a745;
+    outline: none;
+    box-shadow: 0 0 4px rgba(40, 167, 69, 0.4);
+}
+
+/* button styling */
+#comment-form .btn {
+    width: 100%;
+    padding: 12px;
+    font-size: 16px;
+    background-color: #28a745;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+#comment-form .btn:disabled {
+    background-color: #a9e0b6;
+    color: #666;
+    cursor: not-allowed;
+}
+
+#comment-form .btn:not(:disabled):hover {
+    background-color: #218838;
+}
+
+small {
+    color: #333;
+}
+
+.validate-user {
+    text-align: center;
+    font-weight: bold;
+    color: #333;
+}
+
+.text-danger {
+    color: #dc3545;
+    font-size: 14px;
+    font-weight: 400;
+    margin-top: 6px;
+    display: block;
+    animation: fadeIn 0.3s ease-in-out;
+}
+
+.text-danger .show {
+    display: block;
+}
+
+.border-success {
+    border: thin solid green;
+}
+
+.input-error{
+    border: thin solid #dc3545;
+}
+
+
+/* smooth fade-in effect */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(-3px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+
 @media (max-width: 768px) {
   .row {
     flex-direction: column;  /* stack vertically */
@@ -121,3 +222,18 @@ form h3 {
     max-width: 100%;
   }
 }
+
+/*Password form for tablets and larger screens */
+@media (min-width: 768px) {
+    #comment-form{
+        max-width: 500px;
+        padding: 30px;
+    }
+}
+
+@media (min-width: 1024) {
+    #comment-form {
+        max-width: 600px;
+    }
+}
+
