@@ -111,7 +111,8 @@ form h3 {
     color: gray;
 }
 
-#comment-form {
+#comment-form,
+#city-form {
     display: flex;
     flex-direction: column;
     gap: 1rem;
@@ -125,7 +126,8 @@ form h3 {
 }
 
 /* label styling */
-#comment-form label {
+#comment-form
+#city-form, label {
     display: block;
     margin-top: 6px;
     margin-bottom: 0.5rem;
@@ -134,7 +136,8 @@ form h3 {
 }
 
 /* Input styling */
-#comment-form .form-control {
+#comment-form
+#city-form, .form-control {
     width: 100%;
     padding: 10px;
     margin-bottom: 15px;
@@ -151,7 +154,9 @@ form h3 {
 }
 
 /* button styling */
-#comment-form .btn {
+#comment-form
+#city-form,
+ .btn {
     width: 100%;
     padding: 12px;
     font-size: 16px;
@@ -202,6 +207,13 @@ small {
 
 .input-error{
     border: thin solid #dc3545;
+}
+
+.weather-response {
+    color: #333;
+    font-size: 1rem;
+    font-weight: bold;
+    text-align: center;
 }
 
 
