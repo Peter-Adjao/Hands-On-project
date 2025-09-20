@@ -3,11 +3,14 @@ const result = document.querySelector("#result");
  
 let approval = "Not Approved!";
 
-function getApproval() {
+function getApproval(callback) {
     setTimeout(() => {
-        approval = "Approved!";                                              
+        approval = "Approved!";
+        callback();                                              
     }, 500);
 }
 
-getApproval();
+getApproval(() => {
+    result.textContent = approval;
+});
 result.textContent = approval;
