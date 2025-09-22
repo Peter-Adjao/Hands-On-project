@@ -14,7 +14,38 @@
          <div class="row"></div>
          <h3 id="result" class="validate-user"></h3>
 
+
+         <!-- Sending a POST request -->
+        <section class="main-section">
+            <h2>Sending a POST request</h2>
+        </section>
+
+        <div>
+            <main>
+                <form action="" class="form-content">
+                    <div class="form-group">
+                        <label for="title">Title</label>
+                        <input type="text" id="title" class="form-control" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="content">Content</label>
+                        <textarea name="" id="content" class="form-control" rows="4" required></textarea>
+                    </div>
+                    <button id="submit-button" type="submit" class="btn btn-primary">Submit</button>
+
+                </form>
+            </main>
+        </div>
+        <div class="row">
+        <section class="display">
+          <p id="response-message"></p>
+          <h2 id="response-title"></h2>
+          <small id="response-id"></small>
+          <p id="response-content"></p>
+        </section>
+      </div>
     </div>
+
     <script src="js/asynch.js"></script>
 </body>
 </html>
